@@ -1,0 +1,45 @@
+{
+  "es": {
+    "translation": {
+      "loading": "Cargando...",
+      "Actions": {
+        "create": "Crear",
+        "editing": "Editando",
+        "edit": "Editar",
+        "close": "Cerrar",
+        "send": "Enviar",
+        "delete": "Eliminar",
+        "assign_awards": "Asignar premios",
+        "are_you_sure": "Está seguro de realizar esta acción?",
+        "messages": {
+          "save_ok": "Operación exitosa",
+          "error": "Se ha presentado un error",
+          "yes": "Si",
+          "no": "No",
+          "no_registers": "No hay registros para mostrar...",
+          "ERROR_TRY_ASSIGN_AWARDS_TO_PEOPLE": "No se pudo asignar los premios dado que actualmente no hay cantidad suficiente para todas las personas."
+        }
+      },
+      "Errors": {
+        "required_field": "Campo requerido o el valor no es valido"
+      },
+      "People": {
+        "title": "Personas",
+        "id": "ID",
+        "typedocument": "Tipo de documento",
+        "document": "Documento",
+        "name": "Nombres",
+        "lastname": "Apellidos",
+        "birthdate": "Fecha nacimiento"
+      },
+      "Awards": {
+        "title": "Premios",
+        "id": "ID",
+        "code": "Codigo",
+        "description": "Descripción",
+        "count": "Cantidad",
+        "no_award": "Sin premios"
+      }
+    }
+  }
+}

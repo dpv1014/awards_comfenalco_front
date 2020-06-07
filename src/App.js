@@ -1,24 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React, {useContext} from 'react';
+import {
+  Switch,
+  Route
+} from "react-router-dom";
+import './App.sass';
+import './config/i18n';
+import { ROUTERS_URL } from "./config/routes";
+import Headerapp from "./components/Headerapp/Headerapp";
+import People from "./components/People/People";
+import Awards from "./components/Awards/Awards";
+import {NotificationContainer, NotificationManager} from "react-notifications";
+import 'react-notifications/lib/notifications.css';
+import {ContextApp} from "./config/context";
 function App() {
+  const context = useContext(ContextApp);
+  context.notificationService = NotificationManager;
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Headerapp></Headerapp>
+      <div className="ContentApp">
+        <Switch>
+          <Route path={ROUTERS_URL.people_path.url}>
+            <People />
+          </Route>
+          <Route path={ROUTERS_URL.awards_path.url}>
+            <Awards />
+          </Route>
+          <Route path="/">
+            <People />
+          </Route>
+        </Switch>
+      </div>
+      <NotificationContainer/>
     </div>
   );
 }
